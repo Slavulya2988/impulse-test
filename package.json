@@ -20,7 +20,15 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "tsc --noEmit && eslint src/**/*.ts{,x} --max-warnings 0",
+    "lint:fix": "eslint src/**/*.ts{,x} --fix",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "./**/*.{ts,tsx,css,scss,md}": [
+      "npm run lint"
+    ]
   },
   "eslintConfig": {
     "extends": [
