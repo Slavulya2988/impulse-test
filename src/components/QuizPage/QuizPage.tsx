@@ -1,4 +1,6 @@
-import React, { ReactElement, useState } from 'react';
+import React, {
+  ReactElement, useState, useRef, useEffect,
+} from 'react';
 import { Dispatch } from 'redux';
 import { useDispatch } from 'react-redux';
 import Burger from './components/Burger/Burger';
@@ -22,13 +24,16 @@ function QuizPage({ questions, moneyStepsData }:QuizPageProps):ReactElement {
   const [chosenOption, setChosenOption] = useState<string | null>(null);
   const [isCorrectOption, setIsCorrectOption] = useState(false);
 
+  const timerRef = useRef<any>(null);
+
   const dispatch: Dispatch<GameAction> = useDispatch();
 
-  const handleAnswerClick = (option:string) => {
+  const handleOptionClick = (option:string) => {
     setChosenOption(option);
-    const isCorrect = option === questions[currentQuestionId].answer;
+    const isCorrect = questions[currentQuestionId].answers.includes(option);
     setIsCorrectOption(isCorrect);
-    setTimeout(() => {
+
+    timerRef.current = setTimeout(() => {
       if (currentQuestionId < questions.length - 1 && isCorrect) {
         setCurrentQuestionId(currentQuestionId + 1);
         setChosenOption(null);
@@ -45,6 +50,8 @@ function QuizPage({ questions, moneyStepsData }:QuizPageProps):ReactElement {
     }, 2000);
   };
 
+  useEffect(() => () => clearTimeout(timerRef.current), []);
+
   return (
     <>
       <Burger moneyStepsData={moneyStepsData} currentQuestionId={currentQuestionId} />
@@ -54,10 +61,10 @@ function QuizPage({ questions, moneyStepsData }:QuizPageProps):ReactElement {
           <div className="question">
             <h3>{questions[currentQuestionId].question}</h3>
           </div>
-          <div className="answers">
+          <div className="options">
             {questions[currentQuestionId].options.map((option:string, id) => (
-              <button key={option} onClick={() => handleAnswerClick(option)} disabled={!!chosenOption} type="button" className={`answer ${chosenOption && isCorrectOption && option === chosenOption && 'correct'} ${chosenOption && !isCorrectOption && option === chosenOption && 'wrong'}`}>
-                <h5 className="answerText">
+              <button key={option} onClick={() => handleOptionClick(option)} disabled={!!chosenOption} type="button" className={`option ${chosenOption && isCorrectOption && option === chosenOption && 'correct'} ${chosenOption && !isCorrectOption && option === chosenOption && 'wrong'}`}>
+                <h5 className="optionText">
                   <span className="optionLetter">{letters[id]}</span>
                   {option}
                 </h5>

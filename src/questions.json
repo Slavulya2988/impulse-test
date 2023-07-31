@@ -2,21 +2,75 @@
     "questions":[
         {
             "question":"What is the color of the White House?",
-            "options":["Pink", "Blue", "White", "Rainbow"],
-            "answer": "White",
+            "options":["Pink", "Blue", "White", "Rainbow", "Additional correct option"],
+            "answers": ["White", "Additional correct option"],
             "sum": "$500"
         },
         {
             "question":"How many legs does a spider typically have?",
             "options":["100", "2", "8", "4"],
-            "answer": "8",
+            "answers": ["8"],
             "sum": "$1,000"
         },
         {
             "question":"What do you call a group of crows?",
             "options":["A flock", "A murder", "A gaggle", "A herd"],
-            "answer": "A murder",
+            "answers": ["A murder"],
             "sum": "$2,000"
+        },
+        {
+            "question":"What is the capital of Australia?",
+            "options":["Sydney", "Melbourne", "Brisbane", "Canberra"],
+            "answers": ["Canberra"],
+            "sum": "$4,000"
+        },
+        {
+            "question":"What is the world's largest ocean?",
+            "options":["Atlantic", "Indian", "Pacific", "Arctic"],
+            "answers": ["Pacific"],
+            "sum": "$8,000"
+        },
+        {
+            "question":"Who wrote the 'Game of Thrones' series of books?",
+            "options":["J.K. Rowling", "George R. R. Martin", "Stephen King", "Suzanne Collins"],
+            "answers": ["George R. R. Martin"],
+            "sum": "$16,000"
+        },
+        {
+            "question":"What is the square root of 144?",
+            "options":["12", "14", "16", "18"],
+            "answers": ["12"],
+            "sum": "$32,000"
+        },
+        {
+            "question":"Which planet is known as the 'Red Planet'?",
+            "options":["Venus", "Mars", "Jupiter", "Saturn"],
+            "answers": ["Mars"],
+            "sum": "$64,000"
+        },
+        {
+            "question":"What is the chemical symbol for gold?",
+            "options":["Gd", "Go", "Au", "Ag"],
+            "answers": ["Au"],
+            "sum": "$125,000"
+        },
+        {
+            "question":"Who painted the Mona Lisa?",
+            "options":["Vincent Van Gogh", "Pablo Picasso", "Leonardo da Vinci", "Michelangelo"],
+            "answers": ["Leonardo da Vinci"],
+            "sum": "$250.000"
+        },
+        {
+            "question":"What is the name of the longest river in the world?",
+            "options":["Amazon", "Nile", "Yangtze", "Mississippi"],
+            "answers": ["Nile"],
+            "sum": "$500,000"
+        },
+        {
+            "question":"Who was the first person to walk on the moon?",
+            "options":["Buzz Aldrin", "Neil Armstrong", "Yuri Gagarin", "Michael Collins"],
+            "answers": ["A murder"],
+            "sum": "$1,000,000"
         }
     ]
 }

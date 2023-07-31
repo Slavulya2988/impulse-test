@@ -13,7 +13,11 @@ function Controller() {
     (state: GameState) => state.currentStep,
   );
 
-  const moneyStepsData = data.questions.reduce((newArr:string[], question) => {
+  if (!loadData || !loadData.questions || loadData.questions.length === 0) {
+    throw new Error('Invalid data');
+  }
+
+  const moneyStepsData = loadData.questions.reduce((newArr:string[], question) => {
     newArr.push(question.sum);
     return newArr;
   }, []);

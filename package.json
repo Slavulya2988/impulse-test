@@ -13,6 +13,7 @@
     "@types/react-dom": "^18.2.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.10",
     "react-redux": "^8.1.2",
     "react-scripts": "5.0.1",
     "redux": "^4.2.1",
@@ -27,7 +28,7 @@
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x} --max-warnings 0",
     "lint:fix": "eslint src/**/*.ts{,x} --fix",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"    
+    "deploy": "gh-pages -d build"
   },
   "lint-staged": {
     "./**/*.{ts,tsx}": [

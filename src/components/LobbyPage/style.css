@@ -48,6 +48,15 @@
     padding: 2vh 8vw;
 }
 
+.button:hover{
+    cursor: pointer;
+    background-color: #FFAC70;
+}
+
+.button:active{
+    background-color: #E87928;
+}
+
 .buttonText{
     color: white;
 

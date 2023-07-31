@@ -11,7 +11,7 @@ function MoneySteps({ moneyStepsData, currentQuestionId }:MoneyStepsProps):React
     <div className="steps">
       {moneyStepsData.map((moneyStep:string, id) => (
         <div className={`step ${id === currentQuestionId && 'active'} ${id < currentQuestionId && 'disabled'}`} key={moneyStep}>
-          <h5 className="answerText">
+          <h5 className="optionText">
             {moneyStep}
           </h5>
         </div>

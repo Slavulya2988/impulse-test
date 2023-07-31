@@ -1,6 +1,6 @@
 export type Question = {
   question: string,
   options: string[],
-  answer: string,
+  answers: string[],
   sum: string,
 };
