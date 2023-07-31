@@ -1,0 +1,32 @@
+.steps{
+    height: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
+.step{
+    background-color: white;
+    border: 1px solid #D0D0D8;
+    border-radius: 15px;
+    padding: 1vh 1vw;
+}
+
+.active{
+    border-color: #FF8B37;
+}
+
+.disabled{
+    border-color: #D0D0D8;
+}
+
+.disabled h5 {
+    color: #D0D0D8;
+}
+
+@media (max-width: 920px){
+    .step{
+        padding: 2vh 3vw;
+    }
+}
+

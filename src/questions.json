@@ -1,0 +1,22 @@
+{
+    "questions":[
+        {
+            "question":"What is the color of the White House?",
+            "options":["Pink", "Blue", "White", "Rainbow"],
+            "answer": "White",
+            "sum": "$500"
+        },
+        {
+            "question":"How many legs does a spider typically have?",
+            "options":["100", "2", "8", "4"],
+            "answer": "8",
+            "sum": "$1,000"
+        },
+        {
+            "question":"What do you call a group of crows?",
+            "options":["A flock", "A murder", "A gaggle", "A herd"],
+            "answer": "A murder",
+            "sum": "$2,000"
+        }
+    ]
+}
