@@ -30,8 +30,12 @@
         padding: 2vh 3vw;
     }
 
-    .step:not(:first-child){
+    .step{
         margin-bottom: 2vh;
+    }
+
+    .step:first-child{
+        margin-bottom: 2px;
     }
 }
 

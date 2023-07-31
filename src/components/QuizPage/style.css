@@ -112,4 +112,8 @@
     .optionLetter{
         margin-right: 2vw;
     }
+
+    .option:hover:enabled{
+        border-color: #D0D0D8;
+    }
 }
