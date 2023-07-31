@@ -17,12 +17,12 @@ function LobbyPage({ currentStep }:LobbyPageProps):ReactElement {
 
   const dispatch: Dispatch<GameAction> = useDispatch();
 
-  const handleOnClick = () => {
-    if (isCurrentStepStart) {
-      dispatch(setStep(STEP.InProcess));
-    } else {
-      dispatch(setStep(STEP.Start));
-    }
+  const handleOnClickStart = () => {
+    dispatch(setStep(STEP.InProcess));
+  };
+
+  const handleOnClickTryAgain = () => {
+    dispatch(setStep(STEP.Start));
   };
 
   const prize: Prize = useSelector(
@@ -43,7 +43,8 @@ function LobbyPage({ currentStep }:LobbyPageProps):ReactElement {
                 <h1 className="mainText">{`${prize} earned`}</h1>
               </>
             )}
-          <button className="button" type="button" onClick={handleOnClick}><h5 className="buttonText">{isCurrentStepStart ? 'Start' : 'Try again'}</h5></button>
+          {isCurrentStepStart && <button className="button" type="button" onClick={handleOnClickStart}><h5 className="buttonText">Start</h5></button>}
+          {!isCurrentStepStart && <button className="button" type="button" onClick={handleOnClickTryAgain}><h5 className="buttonText">Try again</h5></button>}
         </div>
       </div>
     </div>
