@@ -92,4 +92,8 @@
         position: absolute;
         bottom: 4vh;
     }   
+
+    .button:hover{
+        background-color: #FF8B37;
+    }
 }
