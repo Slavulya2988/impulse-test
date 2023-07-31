@@ -69,7 +69,7 @@
         {
             "question":"Who was the first person to walk on the moon?",
             "options":["Buzz Aldrin", "Neil Armstrong", "Yuri Gagarin", "Michael Collins"],
-            "answers": ["A murder"],
+            "answers": ["Neil Armstrong"],
             "sum": "$1,000,000"
         }
     ]
