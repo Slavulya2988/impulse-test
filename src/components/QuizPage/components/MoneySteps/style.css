@@ -37,5 +37,9 @@
     .step:first-child{
         margin-bottom: 2px;
     }
+
+    .step:last-child{
+        margin-top: 2px;
+    }
 }
 
