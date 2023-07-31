@@ -16,7 +16,7 @@ function Burger({ moneyStepsData, currentQuestionId }:BurgerProps):ReactElement 
 
   return (
     <>
-      <input className="checkbox" type="checkbox" name="" id="" checked={isChecked} onChange={handleChange} />
+      <input className="checkbox" type="checkbox" checked={isChecked} onChange={handleChange} />
       <div className="hamburgerLines">
         <span className="line line1" />
         <span className="line line2" />
@@ -26,10 +26,8 @@ function Burger({ moneyStepsData, currentQuestionId }:BurgerProps):ReactElement 
       && (
       <div className="menu">
         <div className="menuContent">
-
           <MoneySteps moneyStepsData={moneyStepsData} currentQuestionId={currentQuestionId} />
         </div>
-
       </div>
       )}
 
