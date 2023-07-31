@@ -47,7 +47,7 @@ function QuizPage({ questions, moneyStepsData }:QuizPageProps):ReactElement {
 
         dispatch(setStep(STEP.End));
       }
-    }, 2000);
+    }, 1000);
   };
 
   useEffect(() => () => clearTimeout(timerRef.current), []);
