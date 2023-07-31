@@ -43,7 +43,7 @@ function LobbyPage({ currentStep }:LobbyPageProps):ReactElement {
                 <h1 className="mainText">{`${prize} earned`}</h1>
               </>
             )}
-          <button className="button" type="button" onClick={handleOnClick}>{isCurrentStepStart ? 'Start' : 'Try again'}</button>
+          <button className="button" type="button" onClick={handleOnClick}><h5 className="buttonText">{isCurrentStepStart ? 'Start' : 'Try again'}</h5></button>
         </div>
       </div>
     </div>

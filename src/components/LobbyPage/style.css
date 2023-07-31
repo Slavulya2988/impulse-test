@@ -41,12 +41,16 @@
 }
 
 .button {
-    color: white;
     background-color: #FF8B37;
     font-weight: 600;
     border: none;
     border-radius: 15px;
     padding: 2vh 8vw;
+}
+
+.buttonText{
+    color: white;
+
 }
 
 @media (max-width: 920px){
