@@ -13,6 +13,7 @@ const store: Store<GameState, GameAction> & {
 } = createStore(reducer);
 
 function App() {
+// test
   return (
     <div className="App">
       <Provider store={store}>
